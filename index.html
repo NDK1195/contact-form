@@ -11,10 +11,215 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <link rel="stylesheet" href="./src/output.css" />
     <title>Frontend Mentor | Contact form</title>
   </head>
-  <body class="font-karla">
+  <body
+    class="font-karla bg-green-200-lighter grid min-h-dvh place-items-center"
+  >
+    <main class="relative w-full max-w-[736px]">
+      <form
+        id="form"
+        class="mx-4 flex flex-col gap-10 rounded-2xl bg-white p-6 md:mx-10 md:p-10 lg:mx-0"
+      >
+        <h1
+          class="text-grey-900-darker -mb-2 text-[32px] leading-none font-bold tracking-[-1px]"
+        >
+          Contact Us
+        </h1>
+        <!-- form content -->
+        <div class="flex flex-col gap-6">
+          <!-- name -->
+          <div class="flex flex-col gap-6 md:flex-row md:gap-4">
+            <!-- first name -->
+            <div class="flex grow flex-col gap-2">
+              <label
+                for="first-name"
+                class="text-grey-900-darker leading-normal"
+                >First Name <span class="text-green-600-medium">*</span></label
+              >
+              <input
+                type="text"
+                id="first-name"
+                class="border-grey-500-medium text-grey-900-darker hover:border-green-600-medium rounded-lg border px-6 py-3 text-lg leading-normal outline-none"
+              />
+              <p
+                class="text-red-error hidden leading-normal"
+                id="error-text-first-name"
+              >
+                This field is required
+              </p>
+            </div>
+            <!-- first name -->
+
+            <!-- last name -->
+            <div class="flex grow flex-col gap-2">
+              <label for="last-name" class="text-grey-900-darker leading-normal"
+                >Last Name <span class="text-green-600-medium">*</span></label
+              >
+              <input
+                type="text"
+                id="last-name"
+                class="border-grey-500-medium hover:border-green-600-medium text-grey-900-darker rounded-lg border px-6 py-3 text-lg leading-normal outline-none"
+              />
+              <p
+                class="text-red-error hidden leading-normal"
+                id="error-text-last-name"
+              >
+                This field is required
+              </p>
+            </div>
+            <!-- last name -->
+          </div>
+          <!-- name -->
+
+          <!-- email -->
+          <div class="flex flex-col gap-2">
+            <label for="email" class="text-grey-900-darker leading-normal"
+              >Email Address <span class="text-green-600-medium">*</span></label
+            >
+            <input
+              type="text"
+              id="email"
+              class="border-grey-500-medium text-grey-900-darker hover:border-green-600-medium rounded-lg border px-6 py-3 text-lg leading-normal outline-none"
+            />
+            <p
+              class="text-red-error hidden leading-normal"
+              id="error-text-email"
+            ></p>
+          </div>
+          <!-- email -->
+
+          <!-- query type -->
+          <div class="flex flex-col gap-4">
+            <h3 class="text-grey-900-darker leading-normal">
+              Query Type <span class="text-green-600-medium">*</span>
+            </h3>
+            <div class="flex flex-col gap-4 md:flex-row">
+              <label
+                class="border-grey-500-medium hover:border-green-600-medium group relative flex grow cursor-pointer items-center gap-3 rounded-lg border px-6 py-3"
+                for="query-type-general"
+              >
+                <input
+                  type="radio"
+                  name="query-type"
+                  id="query-type-general"
+                  class="relative z-10 size-[21px] opacity-0"
+                />
+                <!-- checkmark -->
+                <div
+                  class="border-grey-500-medium absolute top-[50%] size-[21px] -translate-y-[50%] rounded-full border-2 opacity-50"
+                ></div>
+                <!-- checkmark -->
+                <img
+                  src="./images/icon-radio-selected.svg"
+                  alt="icon radio selected"
+                  class="absolute top-[50%] hidden -translate-y-[50%]"
+                />
+                <span class="text-grey-900-darker text-lg leading-normal"
+                  >General Enquiry</span
+                >
+              </label>
+              <label
+                class="border-grey-500-medium hover:border-green-600-medium group relative flex grow cursor-pointer items-center gap-3 rounded-lg border px-6 py-3"
+                for="query-type-support"
+              >
+                <input
+                  type="radio"
+                  name="query-type"
+                  id="query-type-support"
+                  class="relative z-10 size-[21px] opacity-0"
+                />
+                <!-- checkmark -->
+                <div
+                  class="border-grey-500-medium absolute top-[50%] size-[21px] -translate-y-[50%] rounded-full border-2 opacity-50"
+                ></div>
+                <!-- checkmark -->
+                <img
+                  src="./images/icon-radio-selected.svg"
+                  alt="icon radio selected"
+                  class="absolute top-[50%] hidden -translate-y-[50%]"
+                />
+                <span class="text-grey-900-darker text-lg leading-normal"
+                  >Support Request</span
+                >
+              </label>
+            </div>
+            <p
+              class="text-red-error hidden leading-normal"
+              id="error-text-query-type"
+            >
+              Please select a query type
+            </p>
+          </div>
+          <!-- query type -->
+
+          <!-- message -->
+          <div class="flex flex-col gap-2">
+            <label for="message" class="text-grey-900-darker leading-normal"
+              >Message <span class="text-green-600-medium">*</span></label
+            >
+            <textarea
+              id="message"
+              class="border-grey-500-medium text-grey-900-darker hover:border-green-600-medium h-[240px] rounded-lg border px-6 py-3 text-lg leading-normal outline-none md:h-[132px] lg:h-[105px]"
+            ></textarea>
+            <p
+              class="text-red-error hidden leading-normal"
+              id="error-text-message"
+            >
+              This field is required
+            </p>
+          </div>
+          <!-- message -->
+        </div>
+        <!-- form content -->
+
+        <!-- checkbox -->
+        <div class="flex flex-col gap-2">
+          <div class="group relative flex items-center gap-4">
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="checkbox"
+              class="relative z-10 opacity-0 group-hover:cursor-pointer"
+            />
+            <!-- checkmark -->
+            <div
+              class="border-grey-500-medium absolute top-[50%] size-[18px] -translate-y-[50%] rounded-sm border-2 group-hover:cursor-pointer group-hover:opacity-70"
+            ></div>
+            <!-- checkmark -->
+            <img
+              src="./images/icon-checkbox-check.svg"
+              alt="icon checkbox check"
+              class="absolute top-[50%] hidden -translate-y-[50%] group-hover:cursor-pointer"
+            />
+            <label
+              for="checkbox"
+              class="text-grey-900-darker leading-normal group-hover:cursor-pointer"
+              >I consent to being contacted by the team
+              <span class="text-green-600-medium">*</span></label
+            >
+          </div>
+          <p
+            class="text-red-error hidden leading-normal"
+            id="error-text-checkbox"
+          >
+            To submit this form, please consent to being contacted
+          </p>
+        </div>
+        <!-- checkbox -->
+
+        <!-- button -->
+        <button
+          type="submit"
+          class="bg-green-600-medium hover:bg-button-hover cursor-pointer rounded-lg py-4 text-lg leading-normal font-bold text-white transition-colors"
+        >
+          Submit
+        </button>
+        <!-- button -->
+      </form>
+    </main>
+
     <script src="./src/index.js"></script>
   </body>
 </html>
