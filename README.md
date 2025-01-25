@@ -8,8 +8,8 @@ This is a solution to the [Contact form challenge on Frontend Mentor](https://ww
 
 ### Links
 
-- Solution URL: [Solution URL here](https://github.com/NDK1195/huddle-landing-page-with-single-introductory-section)
-- Live Site URL: [Live site URL here](https://ndk1195.github.io/huddle-landing-page-with-single-introductory-section/)
+- Solution URL: [Solution URL here](https://github.com/NDK1195/contact-form)
+- Live Site URL: [Live site URL here](https://ndk1195.github.io/contact-form/)
 
 ### Built with
 
